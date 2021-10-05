@@ -1,9 +1,14 @@
 class Team {
-    cosntructor(){
-
+    cosntructor(teamname, trainer, roster){
+        this.teamname = teamname;
+        this.trainer = trainer;
+        this.roster = [];
     }
-    showName(){
+    describe(){
         console.log('coursename');
     }
 }
-let Team= new Team();
+
+
+
+export default Team;
