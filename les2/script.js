@@ -1,24 +1,6 @@
 'use strict';
 
-//import Team from "./Team.js";
-
-
-/*fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-    document.getElementById('staticdiv').addEventListener()
-});
-
-const pokeDisplay = {
-    renderPokes(){
-        const box = document.getElementById('staticDiv');
-        box.innerHTML = "";
-        data.forEach(function(item){
-            const newField = `<div class="staticDiv">`
-        })
-    }
-}*/
+import Team from "./team.js";
 
 let list = [];
 let pokemon = [];
@@ -30,7 +12,6 @@ function getData(){
         return response.json()
     }).then(data => {
         list = data.results;
-        //console.log(result);
 
         //loop over the list to get each pokemon
         for(let element of list){
@@ -57,11 +38,14 @@ window.onload = function(){
             <div >
             <h1>${p.name}</h1>
             <h2>${p.types}</h2>
-            <button>chose me</button>
+            <button>Add to team</button>
             </div>`
         }
         document.getElementById('list').innerHTML=html;
     }
+
+    let team1 = new Team();
+
 }
 
 
@@ -70,5 +54,5 @@ getData();
 
 /*
 <div class="card">
-<img class="card-img-top" scr="${p.sprites.}"
+<img class="card-img-top" scr="${p.sprites.front_default}">
 */

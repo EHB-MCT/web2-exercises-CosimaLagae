@@ -1,15 +1,15 @@
 class Team {
     cosntructor(teamname, trainer, roster){
-        this.teamname = teamname;
-        this.trainer = trainer;
+        this.teamname = 'Default team';
+        this.trainer = 'Ash';
         this.roster = [];
     }
     describe(){
         console.log('coursename');
-        let html = `hello these are the lists...`;
+        return `this ${this.teamname} with trainer ${this.trainer} has the following pokemon: ${[...this.roster]}`;
     }
 }
 
 
 
-//export default Team;
+export default Team;
